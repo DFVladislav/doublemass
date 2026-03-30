@@ -16,7 +16,7 @@ using namespace std;
         }
 
 
-        A[r][c] = 0;
+        A[r][c] = 0;   // посетили клетку
 
 
         function(r + 1, c); // вниз
@@ -32,7 +32,7 @@ using namespace std;
     int main() {
         setlocale(LC_ALL, "Russian");
         cout << "Сколько столбцов(M) и строк (N) в вашем листе?";
-        cin >> M >> N;
+        cin >> M >> N;        // заполняю матрицу данными 
 
         for (int i = 0; i < M; i++) {
 
@@ -51,7 +51,7 @@ using namespace std;
             for (int j = 0; j < N; j++) {
 
                 if (A[i][j] == 1) {
-                    count++;
+                    count++;        // если нашли 1, то увеличиваем счетчик (новый кусок)
                     function(i, j);
                 }
             }
